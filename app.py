@@ -8,5 +8,7 @@ def index():
 
 @app.route('/', methods=['POST'])
 def getvalue():
-    keyword = request.form['search']
-    return render_template('pass.html', key=keyword)
+    name = request.form['name']
+    age = request.form['age']
+    db = request.form['dateofbirth']
+    return render_template('pass.html', n=name, age=age,db=db)
