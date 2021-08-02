@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+body {
+    background: #F4E7D3;
+  }
+h1 {
+    color: #B01335;
+    }
+.search{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    height: 50px;
+    width: 125%;
+    background-color: #ddd;
+}
