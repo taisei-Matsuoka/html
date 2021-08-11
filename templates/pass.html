@@ -7,24 +7,53 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <div class ='search'>
-        <form name ='passdate' action = '.' method ="post">
-        <input type='text' name='keyword' placeholder={{key}}>
-        <input type='submit' name='sibmit' value='結果'>
-    </div>
-    <div class='youtube'>
-        <div id='youtube1'>
-        </div>
-    </div>
-    <div class='youtube'>
-        <div id='youtube2'>
-        </div>
-    </div>
-    <div class='youtube'>
-        <div id='youtube3'>
-        </div>
-    </div>
-</iframe>
+            <h1>山本先生の筋トレコーナー</h1>
+        <div class ='search'>
+                <form name ='passdate' action = '.' method ="post">
+                <input type='text' name='keyword' placeholder={{key}}>
+                <input type='submit' name='sibmit' value='結果'>
+                <input type="button" value="テスト" onClick="pushBtn()"/><br>
+            </div>
+            <h1>{{test}}</h1>
+            <div class='youtube'>
+                <div id='youtube1'>
+                </div>
+            </div>
+            <div class='youtube'>
+                <div id='youtube2'>
+                </div>
+            </div>
+            <div class='youtube'>
+                <div id='youtube3'>
+                </div>
+            </div>
+            
+    <script>
+    var a = {{url1|tojson}};
+    var b = {{url2|tojson}}; 
+    var c = {{url3|tojson}};  
+      (function() {
+      function url1() {
+          fuga = a;
+          return fuga;
+      }
+      function url2() {
+          fuga = b;
+          return fuga;
+      }
+      function url3() {
+          fuga = c;
+          return fuga;
+      }
+      window.hogeLib= window.hogeLib|| {};
+      window.hogeLib.url1 = url1;
+      window.hogeLib.url2 = url2;
+      window.hogeLib.url3 = url3;
+
+      })();
+    </script>
+
 <script src="static/js/script.js"></script>
+
 </body>
 </html>
